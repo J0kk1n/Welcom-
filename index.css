@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    background: url(oblako1.jpg) no-repeat;
+    background-size: 100%;
+    height: 2000px;
+}
+
+
+
+
+.block_wrapper {
+    background: antiquewhite;
+    perspective: 1300px;
+
+    transform-style: preserve-3d;
+}
+
+
+/* Один из способов отцентровать элемент */
+.block {
+    
+    width: 250px;
+    height: 150px;
+    margin: auto;
+    background: #0aa4a5;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 140px;
+    border-bottom: 2px solid gray;
+    
+
+    /* transition: all 0.2s ease 0s; */
+    transition-property: transform, box-shadow, background-color, border-bottom;
+    transition-duration: 0.5s, 0.5s, 1s;
+    transition-timing-function: ease-out;
+
+    
+}
+
+
+
+.block:hover {
+    cursor: pointer;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.5);
+    background: darkkhaki;
+    border-bottom: 5px solid gray;
+
+    /*transform: translateY(-40px);  Перемещает в пространстве */
+    /* transform: scale(1.5,1.5); */
+    /* transform: scale(0.5); */
+    /* transform: scale(-1, 1);   Масштабирует */
+    /* transform: rotate(-5deg);   Вертит по кругу */
+    /* transform: skew(20deg, 0deg);  Деформирует/наклоняет */
+    /*transform: matrix(1, 0, 0, 1, 10, 20);   Несколько функций трансформаций в одной: scaleX, skewY, skewX, scaleY, translateX. translateY*/
+    /*transform: scale(1.5) rotate(360deg) translate(20px,30px) skew(20deg, 15deg);  Мультизапись */
+    /*transform-origin: left;  Смещает центр трансформации */
+
+
+    /* transform: rotate(-5deg) translateY(-40px); */
+    /* transform: translate3d(20px, 20px, 50px); */
+    /* transform: scale3d(1, 1, 60); */
+    /* transform: rotate3d(1, 1, 1, 45deg) translate3d(10px, 20px, 100px) ; */
+    transform: skew(0deg, 20deg);
+    
+    
+    
+
+    
+
+    /* transition-property: all;
+    transition-duration: 5s;  
+    transition-timing-function: steps(10);
+    transition-delay: 1s; */
+
+    /*transition: all 5s ease-out 1s; */
+    
+    transition-duration: 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    perspective: 1300px;
+}
+
+.wrapper_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 100px;
+    border: none;
+    width: 100px;
+    transform: scale(2);
+    padding: 10px;
+    background: #0aa4a5;
+    border-radius: 10px;
+    color: aliceblue;
+    border-bottom: 1px solid gray;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-2px) scale(2);
+    border-bottom: 3px solid gray;
+    box-shadow: 0px 6px 16px 3px rgba(0, 0, 0, 0.2);
+}
+
+.img {
+    width: 300px;
+    
+    transform-origin: left;
+    transform: rotateY(103deg);
+    transition: transform 2s linear 1s;
+}
+
+.img1 {
+    width: 300px;
+    
+    transform-origin: right;
+    transform: rotateY(-103deg);
+    transition: transform 2s linear 1s;
+}
+
+.span {
+   position: absolute;
+   margin-top: 100px;
+   z-index: -1;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 60px;
+}
+
+
+
+
+
